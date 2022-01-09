@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Form Page</title>
+</head>
+<body>
+				
+	 	<form action="#" th:action="@{/insertUsers}" th:object="${user}" method="post">
+				<p>User Id: <input type="text" th:field="*{userId}" /></p>
+				<p>User Name: <input type="text" th:field="*{userName}" /></p>
+				<p><input type="submit" value="Submit" /></p>
+		</form>
+		
+</body>
+</html>

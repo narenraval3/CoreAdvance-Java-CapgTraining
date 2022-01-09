@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+							http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="address" class="com.default_autowiring.Address" scope="singleton">
+		<property name="emCity" value="Rohini Chowk"></property>
+		<property name="emState" value="Delhi"></property>
+	</bean>
+
+	<bean id="address2" class="com.default_autowiring.Address" >
+		<property name="emCity" value="BTM Layout"></property>
+		<property name="emState" value="Karnataka"></property>
+	</bean>	
+	
+  	<bean id="employee" class="com.default_autowiring.Employee" autowire="byName">
+		<property name="emName" value="Naren Rawal"></property>
+	</bean> 
+
+<!-- 	<bean id="employee2" class="com.default_autowiring.Employee" autowire="byType">
+		<property name="emName" value="Finn Balor"></property>
+	</bean>  -->
+	
+	<bean name="customer" class="com.default_autowiring.Customer" autowire="constructor">
+		<constructor-arg name="custId" value="777"/>
+		<constructor-arg name="custName" value="Stev Smith"/>
+	</bean>
+
+</beans>

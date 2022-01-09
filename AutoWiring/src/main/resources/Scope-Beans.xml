@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+							http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="address" class="com.default_autowiring.Address" scope="prototype">
+		<property name="emCity" value="Delhi NCR"></property>
+		<property name="emState" value="Delhi"></property>
+	</bean>
+
+	<bean id="address2" class="com.default_autowiring.Address">
+		<property name="emCity" value="Pataya Beach"></property>
+		<property name="emState" value="Hon Kong"></property>
+	</bean>	
+	
+  	<bean id="employee" class="com.default_autowiring.Employee">
+		<property name="emName" value="Leo Messi"></property>
+	</bean> 
+
+</beans>

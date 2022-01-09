@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="filmDirs" class="com.mapinject.film.FilmDirectors">
+	<property name="directorMap">
+	<map>
+		<entry key="1" value="Christopher Nolen"/>
+		<entry key="2" value="Russo Brothers"/>
+		<entry key="3" value="Mavric John"/>
+	</map>
+	</property>
+
+	<property name="directorList">
+	<list>
+		<value>Christopher Nolen</value>
+		<value>Russo Brothers</value>
+		<value>Mavric John</value>
+	</list>
+	</property>
+
+	<property name="message" value="using collections"/>
+	</bean>
+	
+	<!-- Map XML Bean File -->
+
+	<bean id="setBooks" class="com.set.SetOfBooks">	
+	<property name="bookSet">
+	<set>
+		<value>Java Book</value>
+		<value>Python Book</value>
+		<value>BatMan Comic</value>
+		<value>BatMan Comic</value>
+	</set>
+	</property>
+	</bean>
+	
+</beans>
+

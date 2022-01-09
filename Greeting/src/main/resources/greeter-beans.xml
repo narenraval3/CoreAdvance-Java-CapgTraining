@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="http://www.springframework.org/schema/beans 
+							http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="vis" class="com.greeter.AmarilloVisitor">
+		<property name="name" value="Romen Regins"/>
+	</bean>
+	
+	<bean id="greeter" class="com.greeter.PopupGreeter">
+		<property name="visitor" ref="vis"/>
+	</bean>
+	
+	<bean id="customer" class="com.greeter.Customer">
+		<property name="custName" value="Naren Raval"/>
+		<property name="greeting" value="Hello!!"/>
+	</bean>
+
+	<bean id="jerseyvis" class="com.greeter.JerseyVisitor">
+		<property name="name" value="Bat Man"/>
+		<property name="greeting" value="Dc Super Hero!!"/>
+	</bean>
+	
+	<bean id="order" class="com.greeter.constructor.Order">
+		<property name="item" value="Pen" />
+		<property name="price" value="$ 22.50" />
+		<property name="address" value="Bangalore" />
+	</bean>
+	
+	<bean id="paymentGet" class="com.greeter.constructor.PaymentGateway">
+		<constructor-arg ref="order"/>
+	</bean>
+	
+	<bean id="appProperty" class="com.greeter.AppProperties">
+		<property name="property">
+			<props>
+					<prop key="city">Bangalore</prop>
+					<prop key="street">BTM Layout</prop>
+			</props>
+		</property>
+	</bean>
+	
+</beans>
